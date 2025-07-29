@@ -93,6 +93,10 @@ nav ul li a:hover {
 .nav-link:hover {
   color: #2fff9c;
 }
+nav h1 a{
+  text-decoration: none;
+  color: #2fff9c;
+}
 /* HERO SECTION */
 .hero {
   display: flex;
