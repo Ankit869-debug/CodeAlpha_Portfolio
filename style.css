@@ -1,0 +1,398 @@
+html {
+  scroll-behavior: smooth;
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* BACKGROUND LAYERS */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index:-1;
+  background: #000;
+}
+/* BASE STYLING */
+body {
+  background: #0e0e0e;
+  color: #ffffff;
+
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background-color: #111;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+
+nav h1 {
+  color: #2fff9c;
+  
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: -15px 50px;
+  padding: 5px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #2fff9c;
+}
+.nav-link {
+  position: relative;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #00ffe0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-link:hover {
+  color: #2fff9c;
+}
+/* HERO SECTION */
+.hero {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 2s ease;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #2fff9c;
+  text-shadow: 0 0 20px #04190f;
+}
+
+.hero p {
+  margin: 20px 0;
+  max-width: 600px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.hero img {
+  filter: drop-shadow(3px 3px 5px aqua);
+  border-radius: 50%;
+  margin: 30px 0;
+  width: 200px;
+  height: 200px;
+  border: 5px solid #2fff9c;
+  box-shadow: 0 0 10px #2fff9c;
+}
+
+/* BUTTONS */
+.btn,
+.btn1 {
+  padding: 10px 20px;
+  background: #2fff9c;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover,
+.btn1:hover {
+  background: #1db76d;
+}
+
+.btn1 {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin: 10px auto;
+}
+
+/* CARDS SECTION */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(47, 255, 156, 0.3);
+  transition: transform 0.3s;
+  pointer-events: auto; /* ensure element can receive hover */
+  transition: all 0.3s ease-in-out; 
+  z-index: 1; 
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* .card:hover {
+  transform: translateY(-10px);
+} */
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #2fff9c;
+  font-size: 1rem;
+}
+
+.card p {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2fff9c;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+h1 {
+  color: #2fff9c;
+  text-align: left;
+  padding: 0px 90px;
+}
+.tech-used {
+  display: inline-block;
+  padding: 4px 18px;
+  background-color: #2fff9c;
+  border: 2px solid black;
+  border-radius: 50px;
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+  margin-top: 8px;
+  pointer-events: none;
+  /* no hover effect */
+  text-align: center;
+}
+
+div .btn-link:hover {
+  background-color: #00e676 !important;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00e676;
+  transition: all 0.3s ease;
+  /* color: black !important; */
+}
+
+.btn-link:active {
+  background-color: #00cc66 !important;
+  transform: scale(0.96);
+}
+
+.cardss {
+  background-color: black;
+}
+
+/* FOOTER */
+
+footer p {
+  color: #fff;
+}
+
+footer {
+  background-color: #111;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.social-accounts {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.social-accounts a {
+  color: #fff;
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-accounts a:hover {
+  color: #00ff99;
+  /* Neon green glow or change it as per your theme */
+  transform: scale(1.2);
+}
+
+/* Optional: Make icons glow a bit */
+.social-accounts a:hover i {
+  text-shadow: 0 0 10px #00ff99;
+}
+
+/* Responsive tweaks (optional) */
+@media (max-width: 500px) {
+  .social-accounts {
+    gap: 15px;
+  }
+
+  .social-accounts a {
+    font-size: 20px;
+  }
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 40px 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------- */
+/* RESPONSIVE BREAKPOINTS     */
+/* --------------------------- */
+
+/* Extra Small Devices (iPhone SE, Folded phones) */
+@media (max-width: 375px) {
+  nav {
+    padding: 10px 20px;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero img {
+    width: 150px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    padding: 0 20px;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+/* Small Phones (iPhone XR, Galaxy A51, Pixel 7) */
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .btn,
+  .btn1 {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablets & Foldables */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  h1 {
+    padding: -1px 40px;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+/* Nest Hub, iPad Pro landscape */
+@media (max-width: 1024px) {
+  .card {
+    width: 220px;
+  }
+}
